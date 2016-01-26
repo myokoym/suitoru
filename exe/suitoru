@@ -74,5 +74,6 @@ YEARS.reverse.product(MONTHS.reverse) do |pair|
   File.open(output_path, "w") do |input_file|
     euc_text = res.body
     input_file.write(euc_text.encode("UTF-8", "EUC-JP"))
+    puts("#{output_path} is saved.")
   end
 end
