@@ -1,5 +1,7 @@
 # Suitoru
 
+[![Gem Version](https://badge.fury.io/rb/suitoru.svg)](http://badge.fury.io/rb/suitoru)
+
 A crawler for such as mailing lists.
 
 ## Installation
