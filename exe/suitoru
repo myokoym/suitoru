@@ -29,12 +29,13 @@ MONTHS = Date::MONTHNAMES[1..-1]
 
 DATA_DIR = "data"
 
-FileUtils.mkdir_p(DATA_DIR)
+output_dir = File.join(DATA_DIR, "#{project}-#{list}")
+FileUtils.mkdir_p(output_dir)
 
 YEARS.reverse.product(MONTHS.reverse) do |pair|
   year, month = *pair
   basename = "#{year}-#{month}.txt"
-  output_path = File.join(DATA_DIR, basename)
+  output_path = File.join(output_dir, basename)
   if File.exist?(output_path) &&
        (current_year != year || Date::MONTHNAMES[current_month] != month)
     $stderr.puts("#{basename} already exists.")
