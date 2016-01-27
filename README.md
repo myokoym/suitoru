@@ -4,6 +4,8 @@
 
 A crawler for such as mailing lists.
 
+Notice: It only supports mailing lists in osdn.jp for now.
+
 ## Installation
 
     $ gem install suitoru
